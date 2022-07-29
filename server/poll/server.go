@@ -2,9 +2,9 @@ package poll
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"github.com/dukryung/poll-server/server/poll/endpoint"
 	"github.com/dukryung/poll-server/server/types"
+	"github.com/gin-gonic/gin"
 )
 
 type Server struct {

@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
+	"github.com/dukryung/poll-server/server/app"
 	"os"
 	"os/signal"
-	"poll-server/server/app"
 	"syscall"
 )
 
