@@ -1,12 +1,31 @@
 package app
 
-import "github.com/dukryung/poll-server/server/types"
+import (
+	"github.com/dukryung/poll-server/server/types"
+	"poll-server/server/poll"
+)
 
 type App struct {
 	Servers []types.Server
 }
 
 func NewApp() *App {
+	app := &App{}
+	pollServer := poll.NewServer()
 
-	return &App{}
+	app.Servers = append(app.Servers, pollServer)
+
+	return app
+}
+
+func (a *App) RunServers() {
+	for _, server := range a.Servers {
+		server.Run()
+	}
+}
+
+func (a *App) CloseServers() {
+	for _, server := range a.Servers {
+		server.Close()
+	}
 }
