@@ -1,8 +1,8 @@
 package app
 
 import (
+	"github.com/dukryung/poll-server/server/poll"
 	"github.com/dukryung/poll-server/server/types"
-	"poll-server/server/poll"
 )
 
 type App struct {

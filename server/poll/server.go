@@ -25,7 +25,7 @@ func NewServer() *Server {
 }
 
 func (s *Server) Run() {
-	err := s.router.Run()
+	err := s.router.Run(":13578")
 	if err != nil {
 		fmt.Println(err)
 	}

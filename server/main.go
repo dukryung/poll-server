@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"github.com/dukryung/poll-server/server/app"
 	"os"
 	"os/signal"
@@ -9,7 +8,7 @@ import (
 )
 
 func main() {
-	fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!")
+
 
 	app := app.NewApp()
 	quit := make(chan os.Signal)
